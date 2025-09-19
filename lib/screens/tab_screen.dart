@@ -27,7 +27,7 @@ class _TabScreenState extends ConsumerState<TabScreen> {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
       await Navigator.of(context).push<Map<Filter, bool>>(
-        MaterialPageRoute(builder: (ctx) => FilterScreen()),
+        MaterialPageRoute(builder: (ctx) => const FilterScreen()),
       );
     }
   }
@@ -52,7 +52,7 @@ class _TabScreenState extends ConsumerState<TabScreen> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectActiveIndex,
         currentIndex: _activeIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.set_meal),
             label: "Categories",
